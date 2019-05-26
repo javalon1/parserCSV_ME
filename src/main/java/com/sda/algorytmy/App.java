@@ -16,9 +16,16 @@ public class App
 
     public static void main(String[] args)
     { try {
+        byte[] lines2 = Files.readAllBytes(file);
+
 
         List<String> lines = Files.readAllLines(file);
-        System.out.println(lines);
+
+
+        System.out.println(lines.get(1));
+        String[] l = lines.get(1).split(",");
+        System.out.println(l);
+     /*   System.out.println(lines);*/
     }catch(IOException e){
         e.printStackTrace();
     }
